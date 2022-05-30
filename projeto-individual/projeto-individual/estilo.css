@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:wght@100&display=swap');
+
+body {
+  background-color: rgb(247, 232, 232);
+  margin: 0%;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  
+
+}
+
+.header {
+    background-color: #A5243D;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    
+
+   
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 2000px;
+    align-items: center;
+    
+
+}
+
+
+.img {
+width: 300px;    
+height: 150px;
+margin-top: 30px;
+
+}
+
+
+.navbar {
+    width:2000px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #B9CFD4;  
+    height: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+    
+  
+   
+       
+}
+
+.carrossel {
+    width: 100%;
+    height: 600px;
+    animation: slide 8s infinite;
+    animation-duration: alternate;
+    background-position: left;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes slide {
+
+    0%,
+    30% {
+        background-image: url(banner.png);
+    }
+
+    70%,
+    100% {
+        background-image: url(banner2.png);
+    }
+
+  /*  70%,
+    100% {
+        background-image: url(img-site/covid_vacines_banner-canva.png);
+    } */
+
+}
+
+.div1{
+ height: 563px;
+ width: 957px;
+ font-family: 'Oswald', sans-serif;
+ font-family: 'Raleway', sans-serif;
+ font-weight: bold;
+ font-size: larger;
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ margin-left: 50%;
+ background-color: #CEE0DC;
+ margin-top: 18px;
+ 
+ 
+
+}
+
+.texto-home{
+   width: 800px;
+  
+    
+}
+
+
+.h1{
+  margin-bottom: 100px;
+}
+
