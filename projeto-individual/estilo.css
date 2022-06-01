@@ -210,3 +210,13 @@ height: 70vh;
     transform: scale(1.1); 
 
 }
+ 
+.boxcadastro{
+    border: black solid;
+    width: 30vw;
+    height: 50vh;
+    margin-top: 150px;
+    margin-left: 550px;
+    display: flex;
+    justify-content: center;
+}
