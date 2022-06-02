@@ -94,9 +94,38 @@ function cadastrar(req, res) {
     }
 }
 
+function votar(req, res) {
+    var voto = req.body.votoServer;
+    var idVoto = req.body.idVotoServer;
+
+    if (voto == undefined) {
+        res.status(400).send("Seu voto está undefined!");
+    } else if (idVoto == undefined) {
+        res.status(400).send("Seu id está indefinida!");
+    } else {
+        
+        usuarioModel.votar(voto, idVoto)
+            .then(
+                function (resultado) {
+                 res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("\nHouve um erro ao realizar o cadastro! Erro: ", 
+                    erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    votar
 }

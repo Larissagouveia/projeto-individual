@@ -31,8 +31,19 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucao);
 }
 
+function votar(voto, idVoto) {
+    console.log("USUARIO MODEL");
+    var instrucao = ` insert into votacao values ('${idVoto}','${voto}');
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    votar
 };

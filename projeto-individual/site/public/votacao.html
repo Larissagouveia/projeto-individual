@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Majesty | Votação</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="icon" href="./assets/icon/favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Header-->
+    <body>
+        <div class="header">
+    
+            <div class="container">
+    
+                <img src=".\assets\imgs\logotipo.png" class="img">
+    
+                 <ul class="navbar">
+
+                    <a href="index.html" class="sair"><li>Sair</li></a> 
+                </ul>
+                
+            </div>
+        </div> 
+
+        <div class="banner-votos">
+            <h1 class="titulo-votacao">Qual bolsa você mais gosta?</h1> 
+
+            <div class="inputs">
+
+                <img src="">
+            
+             <button onclick="bolsa1()">bolsa1</button> <br>
+             
+             <button onclick="bolsa2()">bolsa2</button> <br>
+             
+             <button onclick="bolsa3()">bolsa3</button> <br>
+             
+             <button onclick="bolsa4()">bolsa4</button> <br>
+             
+             <button onclick="votar()">votar</button>
+          
+            </div>
+             
+        </div>
+
+    </body>
+    <script>
+    
+       var voto
+
+
+        function bolsa1() {
+        
+            voto = 100
+    
+        }
+
+        function bolsa2() {
+
+            voto = 101
+            
+        }
+
+        function bolsa3() {
+
+            voto = 102
+            
+        }
+
+        function bolsa4() {
+            
+            voto = 103
+        }
+       
+        function votar(){
+            votoVar = voto;
+            idVotoVar = sessionStorage.ID_USUARIO;
+
+            fetch("/usuarios/votar", {
+                method: "POST",
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify({
+
+                    votoServer : votoVar,
+                    idVotoServer: idVotoVar
+                })
+            }).then(function(resposta){
+
+                console.log("resposta:", resposta);
+
+                if(resposta.ok){
+                    
+                    console.log("O cadastro deu certo!")
+                } else {
+                    throw ("Houve um erro no cadastro!")
+                }
+
+            }).catch(function(resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            
+            });
+            
+               return false;
+        }
+
+
+    </script>

@@ -168,6 +168,17 @@ height: 70vh;
     transform: scale(1); 
 }
 
+.sair{
+    text-decoration: none;
+    transition: transform 0s ease-in-out;
+    color: black;
+}
+
+.sair:hover{
+    color:#A5243D;
+    transform: scale(1); 
+}
+
 .h2{
     margin-top: 70px;
     margin-left: 430px;
