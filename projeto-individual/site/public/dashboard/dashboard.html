@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Dashboards</title>
+    <title>Majesty | Dashboard</title>
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="dashboards.css">
     <script src="../js/funcoes.js"></script>
 
@@ -24,46 +25,22 @@
 
 <body onload="validarSessao(), atualizarFeed()">
 
-    <div class="janela">
-        <div class="header-left">
-            <h1>AcquaTec</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+        <div class="header">
+    
+            <div class="container">
+    
+                <img src="..\assets\imgs\logotipo.png" class="img">
+    
+                 <ul class="navbar">
+                    <a href="index.html" class="home"><li>Home</li></a>
+                    <a href="curiosidade.html" class="curiosidade"><li>Curiosidades</li></a>
+                    <a href="cadastro.html" class="cadastro"><li>Cadastre-se</li></a>
+                    <a href="login.html" class="login"><li>Login</li></a> 
+                </ul>
+                
             </div>
-
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
         </div>
-
-        <div class="dash">
-            <div class="btns-dash">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Aquario 4</button>
-            </div>
+           
             <div>
                 <h3 class="tituloGraficos">
                     <span id="tituloAquario">123</span>
@@ -88,11 +65,11 @@
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    verificar_autenticacao();
+    // verificar_autenticacao();
 
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById("tituloAquario")
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+        tituloAquario.innerHTML = "" 
     }
 
     // O gráfico é construído com três funções:
@@ -133,7 +110,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico(resposta, Votos) {
         console.log('iniciando plotagem do gráfico...');
 
         var dados = {
@@ -141,17 +118,9 @@
             datasets: [
                 {
                     yAxisID: 'y-umidade',
-                    label: 'Umidade',
+                    label: 'Votos',
                     borderColor: '#32B9CD',
-                    backgroundColor: '#32b9cd8f',
-                    fill: true,
-                    data: []
-                },
-                {
-                    yAxisID: 'y-temperatura',
-                    label: 'Temperatura',
-                    borderColor: '#FFF',
-                    backgroundColor: '#32b9cd8f',
+                    backgroundColor:'black',
                     fill: true,
                     data: []
                 }
@@ -160,15 +129,15 @@
 
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            dados.labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.umidade);
-            dados.datasets[1].data.push(registro.temperatura);
+            dados.labels.push(registro.tipo);
+            dados.datasets[0].data.push(registro.Votos);
+           // dados.datasets[1].data.push(registro.temperatura);
         }
 
         console.log(JSON.stringify(dados));
 
         var ctx = canvas_grafico.getContext('2d');
-        window.grafico_linha = Chart.Line(ctx, {
+        window.grafico_linha = Chart.Bar(ctx, {
             data: dados,
             options: {
                 responsive: true,
@@ -187,7 +156,7 @@
                         id: 'y-temperatura',
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
+                           // max: 100,
                             min: 0
                         }
                     }, {
@@ -197,7 +166,7 @@
                         id: 'y-umidade',
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
+                           // max: 100,
                             min: 0
                         },
 
@@ -209,7 +178,7 @@
             }
         });
 
-        setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+        // setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
     }
 
 
@@ -228,14 +197,14 @@
                     console.log(`Dados atuais do gráfico: ${dados}`);
 
                     // tirando e colocando valores no gráfico
-                    dados.labels.shift(); // apagar o primeiro
-                    dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
+                    //dados.labels.shift(); // apagar o primeiro
+                    //dados.labels.push(novoRegistro[0].tipo_grafico); // incluir um novo momento
                     
-                    dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                    dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
+                    //dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                    //dados.datasets[0].data.push(novoRegistro[0].tipo); // incluir uma nova medida de umidade
                     
-                    dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-                    dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+                   // dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
+                   // dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
 
                     window.grafico_linha.update();
 

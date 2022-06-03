@@ -44,13 +44,13 @@
 
                 <img src="">
             
-             <button onclick="bolsa1()">bolsa1</button> <br>
+             <button onclick="estilo1()">bolsa1</button> <br>
              
-             <button onclick="bolsa2()">bolsa2</button> <br>
+             <button onclick="estilo2()">bolsa2</button> <br>
              
-             <button onclick="bolsa3()">bolsa3</button> <br>
+             <button onclick="estilo3()">bolsa3</button> <br>
              
-             <button onclick="bolsa4()">bolsa4</button> <br>
+             <button onclick="estilo4()">bolsa4</button> <br>
              
              <button onclick="votar()">votar</button>
           
@@ -64,25 +64,25 @@
        var voto
 
 
-        function bolsa1() {
+        function estilo1() {
         
             voto = 100
     
         }
 
-        function bolsa2() {
+        function estilo2() {
 
             voto = 101
             
         }
 
-        function bolsa3() {
+        function estilo3() {
 
             voto = 102
             
         }
 
-        function bolsa4() {
+        function estilo4() {
             
             voto = 103
         }
@@ -108,6 +108,7 @@
                 if(resposta.ok){
                     
                     console.log("O cadastro deu certo!")
+                    window.location="/dashboard/dashboard.html"
                 } else {
                     throw ("Houve um erro no cadastro!")
                 }
