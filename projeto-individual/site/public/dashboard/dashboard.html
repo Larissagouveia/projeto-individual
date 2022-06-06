@@ -25,27 +25,22 @@
 
 <body onload="validarSessao(), atualizarFeed()">
 
+    <body>
         <div class="header">
     
             <div class="container">
     
                 <img src="..\assets\imgs\logotipo.png" class="img">
     
-                 <ul class="navbar">
-                    <a href="index.html" class="home"><li>Home</li></a>
-                    <a href="curiosidade.html" class="curiosidade"><li>Curiosidades</li></a>
-                    <a href="cadastro.html" class="cadastro"><li>Cadastre-se</li></a>
-                    <a href="login.html" class="login"><li>Login</li></a> 
-                </ul>
-                
+                 <button href="../index.html">Sair</button>
             </div>
-        </div>
+        </div> 
            
             <div>
                 <h3 class="tituloGraficos">
                     <span id="tituloAquario">123</span>
                 </h3>
-            </div>
+            </div>                                                                                                                                                                                    
             <div class="graph">
                 <canvas id="canvas_grafico"></canvas>
             </div>
@@ -156,7 +151,7 @@
                         id: 'y-temperatura',
                         ticks: {
                             beginAtZero: true,
-                           // max: 100,
+                            //max: 50,
                             min: 0
                         }
                     }, {
@@ -166,7 +161,7 @@
                         id: 'y-umidade',
                         ticks: {
                             beginAtZero: true,
-                           // max: 100,
+                           // max: 50,
                             min: 0
                         },
 

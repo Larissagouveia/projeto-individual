@@ -44,20 +44,20 @@
                 <img src="">
              <img src=".\assets\imgs\elegante.jpg" class="img1"> 
              <img src=".\assets\imgs\praia.webp" class="img1"> 
-             <img src=".\assets\imgs\street.jpg" class="img1">
+             <img src=".\assets\imgs\roupa.jpg" class="img1">
              <img src=".\assets\imgs\saia.jpg" class="img1"> <br> <br>
 
              <div class="inputs">
 
-             <button onclick="estilo1()" class="botao1">1° look</button>
+             <button onclick="estilo1()" id="botao1" class="botao1">1° look</button>
              
-             <button onclick="estilo2()" class="botao2">bolsa2</button> 
+             <button onclick="estilo2()" id="botao2" class="botao2">2° look</button> 
              
-             <button onclick="estilo3()"  class="botao3">bolsa3</button> 
+             <button onclick="estilo3()"  id="botao3" class="botao3">3° look</button> 
              
-             <button onclick="estilo4()"  class="botao4">bolsa4</button> <br> <br> <br>
+             <button onclick="estilo4()"  id="botao4" class="botao4">4° look</button> <br> <br> <br>
              
-             <button onclick="votar()" class="votar">votar</button>
+             <button onclick="votar()" class="votar">Votar</button>
          
             </div>
         </div>
@@ -71,24 +71,40 @@
         function estilo1() {
         
             voto = 100
+            botao1.classList.add("pressionado")
+            botao2.classList.remove("pressionado")
+            botao3.classList.remove("pressionado")
+            botao4.classList.remove("pressionado")
     
         }
 
         function estilo2() {
 
             voto = 101
+            botao2.classList.add("pressionado")
+            botao1.classList.remove("pressionado")
+            botao3.classList.remove("pressionado")
+            botao4.classList.remove("pressionado")
             
         }
 
         function estilo3() {
 
             voto = 102
+            botao3.classList.add("pressionado")
+            botao1.classList.remove("pressionado")
+            botao2.classList.remove("pressionado")
+            botao4.classList.remove("pressionado")
             
         }
 
         function estilo4() {
             
             voto = 103
+            botao4.classList.add("pressionado")
+            botao1.classList.remove("pressionado")
+            botao2.classList.remove("pressionado")
+            botao3.classList.remove("pressionado")
         }
        
         function votar(){
