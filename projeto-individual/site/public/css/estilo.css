@@ -242,3 +242,91 @@ height: 70vh;
     display: flex;
     justify-content: center;
 }
+
+
+
+/* PAGINA DOS GRÁFICOS */
+.banner-votos {
+    border: black solid;
+    width: 100%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 50px;
+    
+    
+    }
+    
+    .titulo-votacao{
+    color: black;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Merienda', cursive;
+    font-size: xx-large;
+    align-items: center;
+    margin-top: 50px;
+    margin: auto;
+    margin-left: 550px;
+
+    }
+    
+
+    .img1{
+        width: 20vw;
+        height: 50vh;
+        margin-left: 55px;
+        }
+
+.botao1{
+    width: 15vw;
+    height: 7vh;
+    margin-left: 100px;
+    border-radius: 20px;
+    background-color:#A5243D;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+
+}
+
+
+.botao2{
+    width: 15vw;
+    height: 7vh;
+    margin-left: 130px;
+    border-radius: 20px;
+    
+
+}
+
+
+.botao3{
+    width: 15vw;
+    height: 7vh;
+    margin-left: 120px;
+    border-radius: 20px;
+    
+
+}
+
+.botao4{
+    width: 15vw;
+    height: 7vh;
+    margin-left: 135px;
+    border-radius: 20px;
+    
+
+}
+
+
+
+
+
+
+.votar{
+    width: 15vw;
+    height: 7vh;
+    margin-left: 650px;
+    border-radius: 20px;
+}
+

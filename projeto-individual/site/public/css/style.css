@@ -235,32 +235,7 @@ input {
   width: 50px;
 }
 
-/* PAGINA DOS GRÁFICOS */
-.banner-votos {
-border: black solid;
-width: 60vw;
-height: 60vh;
-margin: auto;
-margin-top: 50px;
 
-}
-
-.titulo-votacao{
-color: black;
-font-family: 'Abril Fatface', cursive;
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Merienda', cursive;
-font-size: xx-large;
-align-items: center;
-margin-top: 30px;
-margin-left: 250px;
-}
-
-.inputs{
-
-  display: flex;
-
-}
 /* PAGINA DOS GRÁFICOS */
 
 .janela {
