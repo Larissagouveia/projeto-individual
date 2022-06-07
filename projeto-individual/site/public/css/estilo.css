@@ -178,7 +178,7 @@ height: 70vh;
 
 .h2{
     margin-top: 70px;
-    margin-left: 430px;
+    margin-left: 400px;
     font-family: 'Abril Fatface', cursive;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Merienda', cursive;
@@ -188,30 +188,36 @@ height: 70vh;
 
 .container-curiosidade{
     width: 90%;
-    height: 1000px;
-    
-    display: flex;
+    height: 600px;
     margin: auto;
     font-family: 'Josefin Sans', sans-serif;
     font-size: large;
+
     
        
 }
 
 .texto-moda{
-   margin-top: 30px;
-   width: 400px;
-   height: 400px;
-   margin-right: 50px;
+   margin-top: 35px;
+   width:500px;
+   height: 300px;
+   margin-left: 100px;
    text-indent: 10px;
+   border: #A5243D solid;
+   
 }
 
-.texto-moda1{
-    margin-top: 30px;
-    width: 400px;
-    height: 400px;
-    
+.img2{
+    width: 30vw;
+    height: 40vh;
+    margin-left: 800px;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 30px;
+    margin-bottom: 500px;
 }
+   
+
+
 
 .cadastrar{
  width:110px ;
@@ -371,11 +377,5 @@ height: 70vh;
     transform: scale(1); 
 }
 
-.img2{
-    width: 20vw;
-    height: 60vh;
-    margin-left: 200px;
-    box-shadow: 5px 5px 5px gray;
-    border-radius: 30px;
-}
+
 
