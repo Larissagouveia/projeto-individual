@@ -15,7 +15,7 @@
 }
 .imgcadastro{
   width:40vw;
-  height: 69vh;
+  height: 75vh;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@
 
 .formulario{
   width: 40vw;
-  height: 69vh;
+  height: 75vh;
   margin-top: 10px;
   display: flex;
   background-color: black;
@@ -135,18 +135,17 @@ margin: auto;
   }
 
   .btn_login{
-    font-family: "Barlow", sans-serif;
-    border-radius: 5px;
-    font-weight: 600;
+    border-radius: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 10px;
     font-size: 18px;
-    padding: 10px 15px;
+    padding: 10px;
     color: white;
     background-color: #e6005a;
-    width: 120px;
+    width: 100px;
     align-self: center;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: large;
     transition: transform 0s ease-in-out;
+   
   }
   
   .btn_login:hover{
@@ -183,39 +182,39 @@ margin: auto;
   font-size: 20px;
   font-weight: 600 !important;
   
+  
 }
 
 .formulario {
   display: flex;
   flex-direction: column;
+  
 }
 
 input {
   margin-bottom: 25px;
   border: 2px solid white;
   padding: 10px;
-  text-align: center;
   border-radius: 10px;
   width: 500px;
   height: 5px;
-  margin-left: 30px;
+  margin-left: 15px;
+ 
   
 }
 
 .btn {
-  font-family: "Barlow", sans-serif;
-  border-radius: 5px;
-  font-weight: 600;
+  border-radius: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 10px;
   font-size: 18px;
-  padding: 10px 15px;
+  padding: 10px;
   color: white;
   background-color: #e6005a;
-  width: 120px;
+  width: 100px;
   align-self: center;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: large;
   transition: transform 0s ease-in-out;
-  margin-bottom: 5px;
+ 
 }
 
 .btn:hover{

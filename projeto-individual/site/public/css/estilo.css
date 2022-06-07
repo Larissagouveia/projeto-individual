@@ -147,6 +147,7 @@ height: 70vh;
     text-decoration: none;
     transition: transform 0s ease-in-out;
     color: black;
+    
 }
 
 .cadastro:hover{
@@ -169,52 +170,60 @@ height: 70vh;
     text-decoration: none;
     transition: transform 0s ease-in-out;
     color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 10px;
+    margin-left: 1000px;
+    
+    
+    
+    
 }
 
-.sair:hover{
-    color:#A5243D;
-    transform: scale(1); 
-}
 
 .h2{
     margin-top: 70px;
-    margin-left: 400px;
+    margin-left: 630px;
     font-family: 'Abril Fatface', cursive;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Merienda', cursive;
     font-weight: bolder;
+    font-size: 35px;
+    
 
 }
 
-.container-curiosidade{
-    width: 90%;
-    height: 600px;
-    margin: auto;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: large;
-
-    
-       
+.curiosidades{
+    display: flex;
+    margin-bottom: 100px;
+    border: #AFAAB9 solid;
+    background-color: #AFAAB9;
+   
 }
 
 .texto-moda{
    margin-top: 35px;
-   width:500px;
-   height: 300px;
-   margin-left: 100px;
-   text-indent: 10px;
-   border: #A5243D solid;
+   width:800px;
+   height: 330px;
+   margin-left: 60px;
+   text-indent: 20px;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 20px;
+   text-align: center;
+  
+  
    
 }
 
-.img2{
-    width: 30vw;
-    height: 40vh;
-    margin-left: 800px;
-    box-shadow: 5px 5px 5px gray;
-    border-radius: 30px;
-    margin-bottom: 500px;
+.imagem{
+    width: 600px;
+    height: 400px;
+    margin-left: 80px;
+    
+
 }
+
    
 
 
@@ -222,12 +231,13 @@ height: 70vh;
 .cadastrar{
  width:110px ;
  margin-top: 60px;
- border-radius: 10px; 
+ border-radius: 20px; 
  text-decoration: none;
  color: white;
  background-color: black;
  transition: transform 0.4s ease-in-out;
  font-weight: bolder;
+ padding: 10px;
 
 }
 
