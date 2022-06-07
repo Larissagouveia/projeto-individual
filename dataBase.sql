@@ -1,7 +1,6 @@
 CREATE DATABASE majesty;
-
-
 USE majesty;
+
 
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -14,6 +13,7 @@ CREATE TABLE estilo (
 idEstilo INT PRIMARY KEY AUTO_INCREMENT,
 tipo VARCHAR(50)
 ) AUTO_INCREMENT = 100;
+
 
 select * from votacao;
 
@@ -35,7 +35,16 @@ select * from votacao;
 select * from usuario;
 
 
-select count(fkUsuario) as 'Votos', tipo from votacao join estilo on fkEstilo=idEstilo group by tipo;             
+-- qtd de estilo
+select 
+	estilo.tipo,
+    count(fkestilo) as 'Votos'	
+		from votacao 
+			join estilo 
+				on fkEstilo=idEstilo group by tipo;             
+
+-- total de usuarios
+select count(id) from usuario;
 
 
 
